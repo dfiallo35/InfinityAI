@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "TEST",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "cwd": "${workspaceRoot}/backend/infinityai",
+            "python": "${workspaceRoot}/backend/infinityai/.venv/bin/python",
+            "envFile": "${workspaceFolder}/backend/infinityai/.env",
+            "env": {
+
+            },
+            "jinja": true,
+            "justMyCode": false,
+            "args": ["-s", "-m", "run_this_test", "--inline-snapshot=create"]
+        },
+        {
+            "name": "RUN",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceRoot}/backend/infinityai/",
+            "python": "${workspaceRoot}/backend/infinityai/.venv/bin/python",
+            "envFile": "${workspaceFolder}/backend/infinityai/.env",
+            "env": {
+
+            },
+            "args": [
+                "main:app",
+                "--port",
+                "8080",
+                "--host",
+                "localhost"
+            ],
+            "jinja": true,
+            "justMyCode": false,
+        }
+    ]
+}

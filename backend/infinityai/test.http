@@ -1,0 +1,7 @@
+### Generate Text
+POST http://localhost:8000/generate/text
+Content-Type: application/json
+
+{
+    "prompt": "Talk about Miami."
+}
